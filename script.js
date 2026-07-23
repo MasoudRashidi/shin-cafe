@@ -39,7 +39,7 @@ const menuData = {
     title: "شیک‌ها",
     products: [
       { id: "chocolate-shake", name: "شیک شکلات", price: 230000, image: "assets/product-chocolate-shake.jpg" },
-      { id: "vanilla-shake", name: "شیک وانیل یا میلک شیک", price: 220000, image: "assets/product-vanilla-shake.jpg" },
+      { id: "vanilla-shake", name: "میلک شیک", price: 220000, image: "assets/product-vanilla-shake.jpg" },
       { id: "strawberry-shake", name: "شیک توت فرنگی", price: 230000, image: "assets/product-strawberry-shake.jpg" },
       { id: "mango-shake", name: "شیک انبه", price: 230000, image: "assets/product-mango-shake.jpg" },
     ],
@@ -63,6 +63,7 @@ const menuData = {
       { id: "iced-pistachio-latte", name: "آیس لاته پسته", price: 160000, image: "assets/product-iced-pistachio-latte.jpg" },
       { id: "iced-hazelnut-latte", name: "آیس لاته فندق", price: 160000, image: "assets/product-iced-hazelnut-latte.jpg" },
       { id: "iced-latte", name: "آیس لاته", price: 150000, image: "assets/product-iced-latte.jpg" },
+      { id: "iced-blue-latte", name: "آیس لاته بلو بری", price: 170000, image: "assets/product-iced-blue-latte.jpg" },
     ],
   },
 };
@@ -79,8 +80,8 @@ function renderProductsPage() {
 
   document.title = `${category.title} | کافه شین`;
   document.querySelector("#category-title").textContent = category.title;
-  document.querySelectorAll("#category-tabs a").forEach((link) => {
-    const linkCategory = new URL(link.href).searchParams.get("category");
+  document.querySelectorAll("#category-tabs .category-tab").forEach((link) => {
+    const linkCategory = link.dataset.category || new URL(link.href).searchParams.get("category");
     link.classList.toggle("tab-active", linkCategory === categoryKey);
   });
 
