@@ -87,7 +87,7 @@
   }
 
   .tab-active {
-    @apply bg-olive text-white;
+    @apply  text-white;
   }
 
   .sr-only-custom {
