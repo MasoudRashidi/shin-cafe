@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../products.html";
+@source "../script.js";
+
+@theme {
+  --color-olive: #68713d;
+  --color-olive-dark: #454d27;
+  --color-olive-soft: #a7aa7f;
+  --color-cream: #f3efe5;
+  --color-paper: #fbf9f2;
+  --color-ink: #40452a;
+  --color-muted: #777965;
+  --color-menu: #f8f5ed;
+  --color-gold: #9a7b3f;
+  --font-sans: "Vazirmatn", Tahoma, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+  --shadow-soft: 0 18px 45px rgba(71, 75, 45, 0.13);
+  --shadow-lift: 0 -15px 40px rgba(68, 68, 45, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-cream font-sans leading-relaxed text-ink;
+    direction: rtl;
+    text-align: right;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  img {
+    @apply block w-full;
+  }
+
+  button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .hamburger {
+    @apply relative h-0.5 w-[21px] bg-current;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    @apply absolute right-0 h-0.5 w-[21px] bg-current content-[''];
+  }
+
+  .hamburger::before {
+    top: -7px;
+  }
+
+  .hamburger::after {
+    top: 7px;
+  }
+
+  .home-hero {
+    background-image:
+      linear-gradient(to top, rgba(15, 18, 7, 0.44), transparent 48%),
+      url("assets/hero-cafe-shin.png");
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .home-hero::after {
+    @apply pointer-events-none absolute right-0 bottom-0 left-0 h-40 content-[''];
+    background: linear-gradient(transparent, rgba(28, 31, 15, 0.42));
+  }
+
+  .category-title-line {
+    @apply flex w-full items-center justify-center gap-3.5;
+  }
+
+  .category-title-line::before,
+  .category-title-line::after {
+    @apply h-px w-11 content-[''];
+    background: rgba(104, 113, 61, 0.42);
+  }
+
+  .tab-active {
+    @apply bg-olive text-white;
+  }
+
+  .sr-only-custom {
+    @apply absolute h-px w-px overflow-hidden whitespace-nowrap;
+    clip: rect(0 0 0 0);
+  }
+}
+
+@media (min-width: 900px) {
+  .home-hero {
+    background-position: center 60%;
+  }
+
+  body.home-page {
+    background:
+      radial-gradient(circle at 12% 15%, rgba(136, 145, 87, 0.14), transparent 30%),
+      var(--color-cream);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

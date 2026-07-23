@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="مشاهده محصولات و قیمت‌های منوی کافه شین" />
+    <title>منو | کافه شین</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="min-h-screen bg-menu pb-5">
+    <header
+      class="relative z-20 mx-auto flex h-[150px] max-w-[1180px] items-center justify-center px-5 sm:px-[30px]"
+    >
+      <a class="grid justify-items-center leading-tight" href="index.html" aria-label="بازگشت به صفحه اصلی کافه شین">
+        <span class="font-serif text-[3.2rem] leading-none font-bold text-gold">ش</span>
+        <strong class="mt-[3px] text-[1.05rem] text-olive-dark">کافه شین</strong>
+        <small class="mt-[3px] font-serif text-[0.48rem] tracking-[0.24em] text-[#7d765e]"
+          >CAFE SHIN</small
+        >
+      </a>
+    </header>
+
+    <main class="mx-auto max-w-[760px] px-[18px] pt-[25px] pb-[45px] lg:px-[35px] lg:pt-[45px] lg:pb-[70px]">
+      <nav
+        class="grid auto-cols-[minmax(88px,1fr)] grid-flow-col gap-[5px] overflow-x-auto rounded-[18px] border border-[rgba(104,113,61,0.08)] bg-white/60 p-[11px] shadow-[0_8px_30px_rgba(72,75,45,0.05)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        aria-label="دسته‌بندی منو"
+        id="category-tabs"
+      >
+        <a
+          class="grid min-h-[69px] content-center justify-items-center gap-1 rounded-xl px-[9px] py-[7px] text-[0.59rem] whitespace-nowrap text-olive-dark hover:bg-olive hover:text-white"
+          href="products.html?category=hot"
+          ><span class="text-[1.35rem]">☕</span>قهوه‌های گرم</a
+        >
+        <a
+          class="grid min-h-[69px] content-center justify-items-center gap-1 rounded-xl px-[9px] py-[7px] text-[0.59rem] whitespace-nowrap text-olive-dark hover:bg-olive hover:text-white"
+          href="products.html?category=cold"
+          ><span class="text-[1.35rem]">♧</span>نوشیدنی‌های سرد</a
+        >
+        <a
+          class="grid min-h-[69px] content-center justify-items-center gap-1 rounded-xl px-[9px] py-[7px] text-[0.59rem] whitespace-nowrap text-olive-dark hover:bg-olive hover:text-white"
+          href="products.html?category=food"
+          ><span class="text-[1.35rem]">♨</span>غذاها و دسرها</a
+        >
+        <a
+          class="grid min-h-[69px] content-center justify-items-center gap-1 rounded-xl px-[9px] py-[7px] text-[0.59rem] whitespace-nowrap text-olive-dark hover:bg-olive hover:text-white"
+          href="products.html?category=fastfood"
+          ><span class="text-[1.35rem]">♕</span>فست‌فود</a
+        >
+      </nav>
+
+      <div class="my-7 grid justify-items-center text-center">
+        <h1
+          id="category-title"
+          class="category-title-line m-0 text-[clamp(1.35rem,6vw,2rem)] text-olive-dark"
+        >
+          نوشیدنی‌های گرم
+        </h1>
+        <span class="mt-[5px] text-[0.7rem] tracking-[-0.15em] text-olive" aria-hidden="true"
+          >❯❯❯❯</span
+        >
+      </div>
+
+      <div class="mx-auto grid max-w-[720px] gap-2.5" id="product-list" aria-live="polite"></div>
+      <p class="mt-[22px] mb-0 flex items-center justify-center gap-3 text-[18px] text-muted">
+        <span class="text-olive">•</span> همه قیمت‌ها به تومان می‌باشد
+        <span class="text-olive">•</span>
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
