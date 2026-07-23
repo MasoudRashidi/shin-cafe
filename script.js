@@ -1,232 +1,68 @@
 const menuData = {
-  hot: {
-    title: "نوشیدنی‌های گرم",
-    description: "یک انتخاب گرم برای ساختن روزی بهتر",
+  "hot-coffee": {
+    title: "قهوه‌های گرم",
     products: [
-      {
-        id: "espresso",
-        name: "اسپرسو دبل",
-        description: "دو شات عصاره قهوه صددرصد عربیکا با رُست اختصاصی",
-        price: 98000,
-        tag: "پرفروش",
-        image:
-          "assets/product-espresso.jpg",
-      },
-      {
-        id: "latte",
-        name: "کافه لاته",
-        description: "اسپرسو، شیر گرم و بافت نرم فوم شیر با طرح لاته آرت",
-        price: 138000,
-        tag: "محبوب",
-        image:
-          "assets/product-latte.jpg",
-      },
-      {
-        id: "cappuccino",
-        name: "کاپوچینو",
-        description: "ترکیب متعادل اسپرسو، شیر بخارداده‌شده و فوم مخملی",
-        price: 128000,
-        image:
-          "assets/product-cappuccino.jpg",
-      },
-      {
-        id: "mocha",
-        name: "موکا",
-        description: "اسپرسو با شکلات تلخ، شیر گرم و کمی پودر کاکائو",
-        price: 148000,
-        image:
-          "assets/product-mocha.jpg",
-      },
-      {
-        id: "masala",
-        name: "چای ماسالا",
-        description: "چای سیاه، شیر و ترکیب ادویه‌های گرم و معطر",
-        price: 118000,
-        tag: "بدون قهوه",
-        image:
-          "assets/product-masala.jpg",
-      },
-      {
-        id: "herbal-tea",
-        name: "دمنوش آرامش",
-        description: "گل گاوزبان، به‌لیمو، لیموعمانی و عسل طبیعی",
-        price: 108000,
-        tag: "سالم",
-        image:
-          "assets/product-herbal-tea.jpg",
-      },
+      { id: "espresso", name: "اسپرسو", price: 80000, image: "assets/product-espresso.jpg" },
+      { id: "double-espresso", name: "دبل اسپرسو", price: 110000, image: "assets/product-double-espresso.jpg" },
+      { id: "americano", name: "آمریکانو", price: 150000, image: "assets/product-americano.jpg" },
+      { id: "cappuccino", name: "کاپوچینو", price: 150000, image: "assets/product-cappuccino.jpg" },
+      { id: "latte", name: "لاته", price: 150000, image: "assets/product-latte.jpg" },
+    ],
+  },
+  "hot-drinks": {
+    title: "نوشیدنی‌های گرم",
+    products: [
+      { id: "black-tea", name: "چای سیاه", price: 40000, image: "assets/product-black-tea.jpg" },
+      { id: "herbal-tea", name: "دمنوش", price: 50000, image: "assets/product-herbal-tea.jpg" },
+      { id: "hot-chocolate", name: "هات چاکلت", price: 150000, image: "assets/product-hot-chocolate.jpg" },
+      { id: "cocoa-milk", name: "شیر کاکائو", price: 150000, image: "assets/product-cocoa-milk.jpg" },
+      { id: "coconut-latte", name: "لاته نارگیل", price: 155000, image: "assets/product-coconut-latte.jpg" },
+      { id: "hazelnut-latte", name: "لاته فندق", price: 155000, image: "assets/product-hazelnut-latte.jpg" },
+      { id: "pistachio-latte", name: "لاته پسته", price: 155000, image: "assets/product-pistachio-latte.jpg" },
+      { id: "masala", name: "ماسالا", price: 150000, image: "assets/product-masala.jpg" },
+      { id: "karak-tea", name: "چای کرک هل", price: 160000, image: "assets/product-karak-tea.jpg" },
+      { id: "hot-sohan", name: "هات سوهان", price: 155000, image: "assets/product-hot-sohan.jpg" },
+    ],
+  },
+  cool: {
+    title: "نوشیدنی‌های خنک",
+    products: [
+      { id: "lemonade", name: "لیموناد", price: 140000, image: "assets/product-lemonade.jpg" },
+      { id: "mojito", name: "موهیتو", price: 160000, image: "assets/product-mojito.jpg" },
+      { id: "carrot-juice", name: "آب هویج", price: 125000, image: "assets/product-carrot-juice.jpg" },
+      { id: "carrot-ice-cream", name: "آب هویج بستنی", price: 150000, image: "assets/product-carrot-ice-cream.jpg" },
+      { id: "magoon", name: "معجون", price: 250000, image: "assets/product-magoon.jpg" },
+      { id: "banana-milk", name: "شیرموز بستنی", price: 160000, image: "assets/product-banana-milk.jpg" },
+    ],
+  },
+  shakes: {
+    title: "شیک‌ها",
+    products: [
+      { id: "chocolate-shake", name: "شیک شکلات", price: 230000, image: "assets/product-chocolate-shake.jpg" },
+      { id: "vanilla-shake", name: "شیک وانیل یا میلک شیک", price: 220000, image: "assets/product-vanilla-shake.jpg" },
+      { id: "strawberry-shake", name: "شیک توت فرنگی", price: 230000, image: "assets/product-strawberry-shake.jpg" },
+      { id: "mango-shake", name: "شیک انبه", price: 230000, image: "assets/product-mango-shake.jpg" },
+    ],
+  },
+  desserts: {
+    title: "دسرها",
+    products: [
+      { id: "carrot-walnut-cake", name: "کیک هویج گردو", price: 135000, image: "assets/product-carrot-walnut-cake.jpg" },
+      { id: "chocolate-cake", name: "کیک شکلات", price: 140000, image: "assets/product-chocolate-cake.jpg" },
+      { id: "pumpkin-cake", name: "کیک کدو حلوایی", price: 135000, image: "assets/product-pumpkin-cake.jpg" },
+      { id: "tiramisu", name: "تیرامیسو", price: 200000, image: "assets/product-tiramisu.jpg" },
+      { id: "cookie", name: "کوکی", price: 85000, image: "assets/product-cookie.jpg" },
     ],
   },
   cold: {
-    title: "نوشیدنی‌های خنک",
-    description: "تازه، خنک و پرانرژی برای روزهای روشن",
+    title: "نوشیدنی‌های سرد",
     products: [
-      {
-        id: "iced-latte",
-        name: "آیس لاته",
-        description: "اسپرسو، شیر سرد و یخ؛ ساده، خنک و دوست‌داشتنی",
-        price: 148000,
-        tag: "محبوب",
-        image:
-          "assets/product-iced-latte.jpg",
-      },
-      {
-        id: "cold-brew",
-        name: "کلد برو",
-        description: "قهوه عصاره‌گیری‌شده با آب سرد طی هجده ساعت",
-        price: 158000,
-        tag: "پیشنهاد باریستا",
-        image:
-          "assets/product-cold-brew.jpg",
-      },
-      {
-        id: "lemonade",
-        name: "لیموناد نعنا",
-        description: "آب لیموی تازه، نعنا، سیروپ خانگی و یخ",
-        price: 128000,
-        image:
-          "assets/product-lemonade.jpg",
-      },
-      {
-        id: "berry-smoothie",
-        name: "اسموتی بری",
-        description: "توت‌فرنگی، تمشک، موز و ماست یونانی",
-        price: 168000,
-        tag: "بدون شکر",
-        image:
-          "assets/product-berry-smoothie.jpg",
-      },
-      {
-        id: "peach-tea",
-        name: "آیس‌تی هلو",
-        description: "چای سرد دم‌کشیده، پوره هلو و برش میوه تازه",
-        price: 138000,
-        image:
-          "assets/product-peach-tea.jpg",
-      },
-      {
-        id: "mojito",
-        name: "موهیتو کلاسیک",
-        description: "لیموی تازه، نعنا، سودا و شیرین‌کننده ملایم",
-        price: 142000,
-        image:
-          "assets/product-mojito.jpg",
-      },
-    ],
-  },
-  food: {
-    title: "غذا",
-    description: "غذاهای تازه و دست‌ساز با مواد اولیه روز",
-    products: [
-      {
-        id: "chicken-salad",
-        name: "سالاد مرغ گریل",
-        description: "مرغ گریل، کاهو، گوجه گیلاسی، پارمزان و سس مخصوص",
-        price: 285000,
-        tag: "سالم",
-        image:
-          "assets/product-chicken-salad.jpg",
-      },
-      {
-        id: "caesar",
-        name: "سالاد سزار",
-        description: "کاهوی تازه، مرغ گریل، نان کروتان و سس سزار خانگی",
-        price: 298000,
-        tag: "پرفروش",
-        image:
-          "assets/product-caesar.jpg",
-      },
-      {
-        id: "alfredo",
-        name: "پاستا آلفردو",
-        description: "پنه، مرغ، قارچ، خامه و پنیر پارمزان",
-        price: 345000,
-        image:
-          "assets/product-alfredo.jpg",
-      },
-      {
-        id: "pesto-pasta",
-        name: "پاستا پستو",
-        description: "پاستا، سس ریحان و گردو، گوجه گیلاسی و پارمزان",
-        price: 325000,
-        tag: "گیاهی",
-        image:
-          "assets/product-pesto-pasta.jpg",
-      },
-      {
-        id: "omelette",
-        name: "املت مخصوص رُز",
-        description: "تخم‌مرغ محلی، گوجه، کره، پنیر فتا و نان تازه",
-        price: 218000,
-        image:
-          "assets/product-omelette.jpg",
-      },
-      {
-        id: "breakfast",
-        name: "صبحانه انگلیسی",
-        description: "تخم‌مرغ، سوسیس، قارچ، لوبیا، گوجه و نان تست",
-        price: 368000,
-        tag: "کامل",
-        image:
-          "assets/product-breakfast.jpg",
-      },
-    ],
-  },
-  fastfood: {
-    title: "فست‌فود",
-    description: "طعم‌های هیجان‌انگیز برای یک وعده دلچسب",
-    products: [
-      {
-        id: "classic-burger",
-        name: "برگر کلاسیک",
-        description: "۱۵۰ گرم گوشت، پنیر گودا، سبزیجات و سس مخصوص",
-        price: 328000,
-        tag: "پرفروش",
-        image:
-          "assets/product-classic-burger.jpg",
-      },
-      {
-        id: "mushroom-burger",
-        name: "ماشروم برگر",
-        description: "گوشت دست‌ساز، قارچ و پنیر، گودا و سس مخصوص",
-        price: 358000,
-        image:
-          "assets/product-mushroom-burger.jpg",
-      },
-      {
-        id: "chicken-burger",
-        name: "چیکن برگر",
-        description: "مرغ سوخاری ترد، کاهو، خیارشور و سس خردل‌عسل",
-        price: 298000,
-        image:
-          "assets/product-chicken-burger.jpg",
-      },
-      {
-        id: "pepperoni",
-        name: "پیتزا پپرونی",
-        description: "خمیر دست‌ساز، پپرونی، موزارلا و سس گوجه",
-        price: 398000,
-        tag: "تند",
-        image:
-          "assets/product-pepperoni.jpg",
-      },
-      {
-        id: "vegetable-pizza",
-        name: "پیتزا سبزیجات",
-        description: "قارچ، فلفل دلمه، زیتون، ذرت و پنیر موزارلا",
-        price: 348000,
-        tag: "گیاهی",
-        image:
-          "assets/product-vegetable-pizza.jpg",
-      },
-      {
-        id: "club-sandwich",
-        name: "کلاب ساندویچ",
-        description: "مرغ، ژامبون، پنیر، تخم‌مرغ و سبزیجات با سیب‌زمینی",
-        price: 288000,
-        image:
-          "assets/product-club-sandwich.jpg",
-      },
+      { id: "iced-americano", name: "آیس آمریکانو", price: 150000, image: "assets/product-iced-americano.jpg" },
+      { id: "iced-strawberry-latte", name: "آیس لاته توت فرنگی", price: 150000, image: "assets/product-iced-strawberry-latte.jpg" },
+      { id: "iced-coconut-latte", name: "آیس لاته نارگیل", price: 150000, image: "assets/product-iced-coconut-latte.jpg" },
+      { id: "iced-pistachio-latte", name: "آیس لاته پسته", price: 160000, image: "assets/product-iced-pistachio-latte.jpg" },
+      { id: "iced-hazelnut-latte", name: "آیس لاته فندق", price: 160000, image: "assets/product-iced-hazelnut-latte.jpg" },
+      { id: "iced-latte", name: "آیس لاته", price: 150000, image: "assets/product-iced-latte.jpg" },
     ],
   },
 };
@@ -238,7 +74,7 @@ function renderProductsPage() {
   if (!productList) return;
 
   const requestedCategory = new URLSearchParams(window.location.search).get("category");
-  const categoryKey = Object.hasOwn(menuData, requestedCategory) ? requestedCategory : "hot";
+  const categoryKey = Object.hasOwn(menuData, requestedCategory) ? requestedCategory : "hot-coffee";
   const category = menuData[categoryKey];
 
   document.title = `${category.title} | کافه شین`;
@@ -253,7 +89,7 @@ function renderProductsPage() {
       (product) => `
         <article class="grid h-[120px] grid-cols-[125px_1fr] overflow-hidden rounded-[15px] border border-[rgba(104,113,61,0.12)] bg-white/40 p-[5px] transition duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow-soft)]">
           <div class="relative min-h-[116px] overflow-hidden rounded-xl">
-            <img class="h-[120px] object-cover" src="${product.image}" alt="${product.name}" loading="lazy" />
+            <img class="h-[120px] w-full object-cover" src="${product.image}" alt="${product.name}" loading="lazy" />
           </div>
           <div class="flex min-w-0 flex-col justify-between px-[17px] pt-4 pb-[13px] text-right">
             <h2 class="m-0 text-[20px] text-[#292c20]">${product.name}</h2>
