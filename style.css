@@ -366,8 +366,17 @@
   .w-\[75px\] {
     width: 75px;
   }
+  .w-\[90px\] {
+    width: 90px;
+  }
   .w-\[95px\] {
     width: 95px;
+  }
+  .w-\[110px\] {
+    width: 110px;
+  }
+  .w-\[130px\] {
+    width: 130px;
   }
   .w-\[min\(72\%\,340px\)\] {
     width: min(72%, 340px);
