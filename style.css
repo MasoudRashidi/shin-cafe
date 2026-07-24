@@ -300,6 +300,9 @@
   .h-36 {
     height: calc(var(--spacing) * 36);
   }
+  .h-\[65px\] {
+    height: 65px;
+  }
   .h-\[120px\] {
     height: 120px;
   }
@@ -344,6 +347,9 @@
   }
   .w-25 {
     width: calc(var(--spacing) * 25);
+  }
+  .w-\[65px\] {
+    width: 65px;
   }
   .w-\[min\(72\%\,340px\)\] {
     width: min(72%, 340px);
